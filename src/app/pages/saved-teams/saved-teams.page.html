@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Saved Teams</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+  
+    <ion-card *ngFor="let team of savedTeams">
+      <ion-card-header>
+        <ion-card-title>{{ team.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>City:</strong> {{ team.city }}</p>
+  
+        <ion-button color="danger" expand="block" (click)="deleteTeam(team.name)">
+          Delete Team
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+  

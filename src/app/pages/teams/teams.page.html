@@ -1,0 +1,25 @@
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title>League of Ireland Teams</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+  
+    <!-- Show a loading spinner -->
+    <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+  
+    <!-- Show teams after loading -->
+    <ion-list *ngIf="!isLoading">
+      <ion-item *ngFor="let team of teams">
+        <ion-label>
+          <h2>{{ team.name }}</h2>
+          <p>{{ team.city }}</p>
+        </ion-label>
+        <ion-button fill="outline" slot="end" (click)="saveTeam(team)">Save</ion-button>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>
+  
