@@ -1,0 +1,7 @@
+{
+  "name": "league-of-ireland-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
